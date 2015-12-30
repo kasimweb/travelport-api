@@ -29,7 +29,9 @@ class Galileo
 	const SERVICE_CRUISE_SHOPS            = 'CruiseShopService';
 	const SERVICE_CRUISE_MODIFY_CANCEL    = 'CruiseModifyCancelService';
 	const SERVICE_FLIGHT_INFORMATION      = 'FlightInformation';
+	/** Note: this service is not available in the Asia and Pacific region! */
 	const SERVICE_TRAVEL_CODES_TRANSLATOR = 'TravelCodesTranslator';
+	/** Note: this service is only available in the Asia and Pacific region! */
 	const SERVICE_TRIP_PLANNER            = 'TripPlanner';
 	const SERVICE_ITINERARY               = 'Itinerary';
 	const SERVICE_IMAGE_VIEWER            = 'ImageViewer';
@@ -108,7 +110,7 @@ class Galileo
 		$options = [
 			'soap_version'       => SOAP_1_2,
 			'ssl_method'         => SOAP_SSL_METHOD_SSLv3,
-			'cache_wsdl'         => ($isProduction ? WSDL_CACHE_BOTH : WSDL_CACHE_NONE),
+			'cache_wsdl'         => WSDL_CACHE_BOTH,
 			'connection_timeout' => 3,
 			'compression'        => SOAP_COMPRESSION_ACCEPT | SOAP_COMPRESSION_GZIP,
 			'authentication'     => SOAP_AUTHENTICATION_BASIC,

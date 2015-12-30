@@ -1,9 +1,6 @@
 <?php
 use apis\travelport\classic\Galileo;
 
-ini_set('soap.wsdl_cache_enabled', false);
-ini_set('soap.wsdl_cache_ttl', 0);
-
 spl_autoload_register(function ($name)
 {
 	$file = __DIR__ . '/' . str_replace('\\', '/', $name) . '.php';
