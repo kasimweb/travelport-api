@@ -11,8 +11,9 @@ try
 }
 catch (SoapFault $f)
 {
-	echo $f;
-	die('Cannot load wsdl');
+	echo 'Cannot load wsdl', PHP_EOL;
+	echo $f, PHP_EOL;
+	exit(1);
 }
 
 var_dump($api->getFunctions());
